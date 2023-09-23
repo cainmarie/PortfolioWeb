@@ -1,0 +1,437 @@
+* {
+    color: #1c0606;
+}
+
+html {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /*background-image:
+    linear-gradient(180deg, brown, sienna,rgb(218, 172, 122), rgb(235, 224, 216), rgb(235, 224, 216),rgb(235, 224, 216),rgb(235, 224, 216),rgb(235, 224, 216),whitesmoke);*/
+    background-color: rgb(235, 224, 216);
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 300px;
+    max-width: auto;
+    max-height: auto;
+    text-align: center;
+}
+
+main {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    text-align: center;
+    margin-bottom: 2em;
+    text-transform: uppercase;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color: rgba(250, 250, 250, 0.5);
+    border-radius: 20px;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 1em;
+}
+
+nav a {
+    color: #1c0606;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 1em;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+@keyframes slide {
+    from {
+        transform: translateY(90px)
+    }
+
+    to {
+        transform: translateY(0px)
+    }
+}
+
+nav a:hover {
+    background-color: whitesmoke;
+    color: rgb(232, 171, 107);
+}
+
+img {
+    max-width: 100%;
+}
+
+#intro {
+    padding: 1em;
+    animation: slide 1s ease-out;
+}
+
+#heading {
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 10px;
+    padding: 1em;
+    background-color: #311a0e;
+}
+
+#heading h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 50px;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px;
+    padding: 0.5em;
+    background-color: rgb(232, 171, 107);
+    border-radius: 15px;
+}
+
+#heading h2 {
+    background-color: whitesmoke;
+    padding: 0.15em;
+    margin: 0;
+    border-radius: 10px;
+    border: 5px double;
+}
+
+#heading h2 a:hover {
+    color: rgb(232, 171, 107);
+}
+
+/*
+.dot {
+    height: 3em;
+    width: 3em;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 4em;
+    margin-right: 4em;
+}
+*/
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.blinky-symbol {
+    animation: blink 1s infinite;
+}
+
+.text-box {
+    background-color: whitesmoke;
+    padding: 1em;
+    position: relative;
+    margin: 2em 1em 1em 1em;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px;
+}
+
+.text-box li {
+    list-style-type: ">";
+}
+
+#skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#aboutme h1 {
+    margin: 2em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+}
+
+/* Create corner outlines using pseudo-elements */
+.text-box::before,
+.text-box::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    /* Adjust the width of the corner outlines */
+    height: 10px;
+    rotate: -10deg;
+    /* Adjust the height of the corner outlines */
+    border: 2px solid #1c0606;
+    /* Set the outline color and thickness */
+    background-color: transparent;
+    /* Transparent background */
+    z-index: 1;
+    /* Place the outlines above the content */
+}
+
+/* Position the top-left corner outline */
+.text-box::before {
+    top: -5px;
+    /* Adjust the top position to overlap with the box */
+    left: -5px;
+    /* Adjust the left position to overlap with the box */
+}
+
+/* Position the bottom-right corner outline */
+.text-box::after {
+    bottom: -5px;
+    /* Adjust the bottom position to overlap with the box */
+    right: -5px;
+    /* Adjust the right position to overlap with the box */
+}
+
+
+.divider {
+    border: 1px solid #1c0606;
+    margin: 2em;
+}
+
+#portrait {
+    width: 50%;
+    background-color: whitesmoke;
+    padding: 0.5em;
+    transform: rotate(-5deg);
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 5px double #1c0606;
+}
+
+#portrait p {
+    text-align: center;
+    margin: 0;
+}
+
+#portrait::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    /* Adjust the width of the corner outlines */
+    height: 15px;
+    rotate: -10deg;
+    /* Adjust the height of the corner outlines */
+    border: 2px solid #1c0606;
+    /* Set the outline color and thickness */
+    background-color: transparent;
+    /* Transparent background */
+    z-index: 1;
+    /* Place the outlines above the content */
+    top: -10px;
+    left: -10px;
+}
+
+#portfolio-instruct {
+    background-color: rgba(250, 250, 250, 0.5);
+    display: inline-flex;
+    padding: 0.5em;
+    margin-bottom: 2em;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 10pt;
+}
+
+.flip-card {
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 5px;
+    font-size: 40px;
+    text-transform: uppercase;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1.5px;
+}
+
+.flip-card-front li {
+    text-align: left;
+    padding: 0.5em;
+    list-style-type: ">"
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+.flip-card-front {
+    width: 18.5em;
+    height: 17em;
+    border-radius: 10px;
+    /*background-image:
+        linear-gradient(180deg, brown, sienna, rgb(218, 172, 122), rgb(235, 224, 216), rgb(235, 224, 216), rgb(235, 224, 216), rgb(235, 224, 216), rgb(235, 224, 216), whitesmoke);*/
+    background-color: whitesmoke;
+    border: 5px double #1c0606;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.10);
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+}
+
+.flip-card-back img {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.10);
+}
+
+.flip-card-front::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    /* Adjust the width of the corner outlines */
+    height: 15px;
+    rotate: -10deg;
+    /* Adjust the height of the corner outlines */
+    border: 2px solid #1c0606;
+    /* Set the outline color and thickness */
+    background-color: transparent;
+    /* Transparent background */
+    z-index: 1;
+    /* Place the outlines above the content */
+    top: -10px;
+    left: -10px;
+}
+
+.flip {
+    text-align: right;
+    margin-right: 2em;
+    transform: translateY(-100%);
+}
+
+.contact-icons img {
+    width: 5em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-icons p {
+    background-color: whitesmoke;
+    padding: 0.5em;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+#envelope {
+    background-color: whitesmoke;
+    padding: 20px 5px 20px 5px;
+    border-radius: 10px;
+    border: 5px double #1c0606;
+}
+
+#phone {
+    background-color: whitesmoke;
+    padding: 3px;
+    border-radius: 10px;
+    border: 5px double #1c0606;
+}
+
+.socials {
+    display: inline;
+}
+
+.socials img {
+    width: 2em;
+    padding-right: 1em;
+}
+
+.socials li {
+    padding: 2em;
+    list-style-type: none;
+}
+
+.socials a {
+    background-color: whitesmoke;
+    padding: 2em 1em 1em 1em;
+    border-radius: 10px;
+    border: 5px double;
+}
+
+footer {
+    text-align: center;
+}
+
+@media screen and (min-width: 950px) {
+
+    nav {
+        margin-bottom: 1em;
+    }
+
+    #heading {
+        height: 550px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #heading h1 {
+        font-size: 100px;
+        padding: 0.5em;
+    }
+
+    #aboutme {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    #aboutme h1 {
+        grid-column-start: 2;
+        margin: 10px;
+    }
+
+    #portrait {
+        grid-column-start: 1;
+    }
+
+    .text-box {
+        grid-column-start: 2;
+        height: 80%;
+    }
+
+    #portfolio {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+
+}
