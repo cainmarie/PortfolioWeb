@@ -263,11 +263,11 @@ img {
     transform-style: preserve-3d;
 }
 
-.flip-card:active .flip-card-inner {
+.flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
 }
 
-.flip-card:any-link .flip-card-inner {
+.flip-card:active .flip-card-inner {
     transform: rotateY(180deg);
 }
 
