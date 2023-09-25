@@ -29,8 +29,8 @@ nav {
     text-align: center;
     margin-bottom: 2em;
     text-transform: uppercase;
-    margin-left: 2em;
-    margin-right: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
 }
 
 nav ul {
@@ -243,6 +243,7 @@ img {
     border-radius: 10px;
     text-transform: uppercase;
     font-size: 10pt;
+    display: none;
 }
 
 .flip-card {
@@ -263,6 +264,10 @@ img {
 }
 
 .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card:active .flip-card-inner {
     transform: rotateY(180deg);
 }
 
@@ -431,6 +436,10 @@ footer {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr;
+    }
+
+    #portfolio-instruct {
+        display: contents;
     }
 
 
