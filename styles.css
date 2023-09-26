@@ -70,6 +70,10 @@ nav a:hover {
     color: rgb(232, 171, 107);
 }
 
+nav a:focus {
+    color: saddlebrown;
+}
+
 img {
     max-width: 100%;
 }
@@ -267,7 +271,7 @@ img {
     transform: rotateY(180deg);
 }
 
-.flip-card:active .flip-card-inner {
+.flip-card:focus .flip-card-inner {
     transform: rotateY(180deg);
 }
 
