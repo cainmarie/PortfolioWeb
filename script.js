@@ -13,3 +13,12 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+var card = document.getElementById("myCard");
+
+function flipCard() {
+    var inner = card.querySelector(".flip-card-inner");
+    inner.style.transform = inner.style.transform === "rotateY(180deg)" ? "rotateY(0deg)" : "rotateY(180deg)";
+}
+
+card.addEventListener("click", flipCard);
